@@ -63,7 +63,7 @@ IDENTIFIER_CONSTANT        [a-zA-Z_][a-zA-Z0-9_]*
     return DIGIT;
 }
 
-{NUMERIC_CONSTANT}+ {
+{NUMERIC_CONSTANT} {
     printf("Número encontrado: %s\n", yytext);
     return DIGIT;
 }

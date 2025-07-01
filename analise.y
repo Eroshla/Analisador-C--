@@ -164,5 +164,6 @@ void yyerror(const char *s) {
     extern int yylineno;
     extern char *yytext;
     fprintf(stderr, "syntax error at line %d: unexpected token '%s'\n", yylineno, yytext);
+    fprintf(stderr, "Talvez esteja faltando ponto e vírgula em alguma linha anterior!\n");
     exit(1);
 }
