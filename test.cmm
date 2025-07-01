@@ -1,0 +1,93 @@
+// Teste completo da linguagem C--
+// Este arquivo testa várias funcionalidades da gramática
+
+// Declarações de variáveis simples
+int x;
+float y;
+char c;
+void v;
+
+// Declarações com inicialização
+int numero = 42;
+char letra = 'B';
+
+// Declarações de ponteiros
+int *ptr;
+int &ref;
+int *&ptrref;
+
+// Declarações de funções
+int soma();
+float calcula(int a, float b);
+void imprime(char *str);
+
+// Implementação de funções
+int main() {
+    // Declarações locais
+    int i;
+    float resultado;
+    
+    // Expressões aritméticas
+    i = 10 + 5;
+    resultado = i * 3.14;
+    i = i - 1;
+    resultado = resultado / 2;
+    i = i % 3;
+    
+    // Expressões relacionais
+    if (i == 2) {
+        imprime("i é igual a 2");
+    }
+    
+    if (i != 0) {
+        imprime("i é diferente de zero");
+    }
+    
+    if (i < 10) {
+        imprime("i é menor que 10");
+    } else {
+        imprime("i é maior ou igual a 10");
+    }
+    
+    // Laço while
+    while (i > 0) {
+        i = i - 1;
+        continue;
+    }
+    
+    // Laço for
+    for (i = 0; i < 5; i = i + 1) {
+        if (i == 3) {
+            break;
+        }
+        imprime("Iteração do for");
+    }
+    
+    // Chamadas de função
+    resultado = calcula(10, 3.5);
+    soma();
+    
+    return 0;
+}
+
+// Função com parâmetros
+float calcula(int a, float b) {
+    float temp;
+    temp = a + b;
+    return temp;
+}
+
+// Função simples
+int soma() {
+    int a, b, resultado;
+    a = 5;
+    b = 10;
+    resultado = a + b;
+    return resultado;
+}
+
+// Função void
+void imprime(char *mensagem) {
+    // Implementação seria aqui
+    return;
+}
