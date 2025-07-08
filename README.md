@@ -36,6 +36,27 @@ $ make run-err
 
 Esses comandos executam o analisador com os exemplos fornecidos.
 
+### ⚠️ Problemas com caracteres invisíveis
+
+Se ao rodar ocorrer um erro como:
+
+```
+' (hex: 0d 00 69)' não pertence ao alfabeto.
+make: *** [makefile:17: run-err] Error 1
+```
+
+Execute os comandos abaixo para corrigir problemas de codificação/terminadores de linha:
+
+```sh
+sudo apt-get install dos2unix
+iconv -f utf-8 -t utf-8 test.cmm -o test.cmm
+dos2unix test.cmm
+iconv -f utf-8 -t utf-8 test_err.cmm -o test_err.cmm
+dos2unix test_err.cmm
+```
+
+Esses comandos garantem que os arquivos estejam com a codificação correta e que os finais de linha estejam no formato Unix.
+
 ---
 
 ## 📜 Sobre o Flex
