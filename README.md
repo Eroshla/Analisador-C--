@@ -219,7 +219,7 @@ lista_argumentos → expression
 lista_identificadores → IDENTIFIER
                       | lista_identificadores , IDENTIFIER
 
-bloqueio → { source } | { }
+bloco → { source } | { }
 
 if_statment → if ( expression_statment ) statment
             | if ( expression_statment ) statment else statment
